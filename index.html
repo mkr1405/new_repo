@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Kartka Walentynkowa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* pionowe wyśrodkowanie */
+            align-items: center;     /* poziome wyśrodkowanie */
+            text-align: center;
+            background-color: #fff0f5; /* delikatny różowy background */
+        }
+
+        h1 {
+            color: #e60000; /* ładny czerwony */
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        h1 span {
+            margin: 0 5px;
+            color: #ff4d4d; /* jaśniejsze serduszka */
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #ff4d4d;
+            color: white;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #e60000;
+        }
+
+        #content {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* wyśrodkowanie elementów w divie */
+        }
+
+        #text {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #e60000;
+        }
+
+        img {
+            max-width: 300px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>❤️ Czy zostaniesz moją walentynką? ❤️</h1>
+
+    <div>
+        <button onclick="klikTak()">Tak</button>
+        <button onclick="klikNie()">Nie</button>
+    </div>
+
+    <div id="content">
+        <div id="text"></div>
+        <img id="gif" src="" alt="" style="display: none;">
+    </div>
+
+    <script>
+        function klikTak() {
+            document.getElementById("text").textContent = "YEEEAH ❤️";
+            const gif = document.getElementById("gif");
+            gif.src = "https://media.giphy.com/media/gxr4VqlclP4orSSPU5/giphy.gif";
+            gif.style.display = "block";
+        }
+
+        function klikNie() {
+            document.getElementById("text").textContent = "";
+            const gif = document.getElementById("gif");
+            gif.src = "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExd2ZzOTU4Mmxhd2hvaDBsdnh4OW56NmV5MmRlOWd2Y3dxZnZpbmRmZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/X0pjy2xkFYTOW3vfJ8/giphy.gif";
+            gif.style.display = "block";
+        }
+    </script>
+
+</body>
+</html>
